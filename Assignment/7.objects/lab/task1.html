@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create a JavaScript object car with properties brand, model, and year. UseJavaScript to: 
+       //Access and print the car’s brand and model. 
+      //Update the year property. 
+     //Add a new property color to the car object. 
+
+     let car = {
+    brand: "Toyota",
+    model: "Corolla",
+    year: 2020
+};
+
+// Access and print the car’s brand and model
+console.log(car.brand);  // Output: Toyota
+console.log(car.model);  // Output: Corolla
+
+// Update the year property
+car.year = 2023;
+
+// Add a new property color
+car.color = "red";
+
+console.log(car); // Output: { brand: "Toyota", model: "Corolla", year: 2023, color: "red" }
+    </script>
+
+    <script>
+        // Using an array and splice to update car properties
+        let carProps = ["Toyota", "Corolla", 2020];
+
+        // Access and print brand and model
+        console.log(carProps[0]); // Toyota
+        console.log(carProps[1]); // Corolla
+
+        // Update the year property using splice (index 2)
+        carProps.splice(2, 1, 2023);
+
+        // Add a new property color using splice (add at the end)
+        carProps.splice(3, 0, "red");
+
+        console.log(carProps); // ["Toyota", "Corolla", 2023, "red"]
+    </script>
+</body>
+</html>

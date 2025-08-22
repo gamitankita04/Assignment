@@ -1,0 +1,49 @@
+Question 1: What are functions in JavaScript? Explain the syntax for declaring and
+calling a function. 
+Answer:
+        Functions in JavaScript are reusable blocks of code that perform a specific
+        task. They help organize code, avoid repetition, and make programs easier 
+        to manage.
+
+        Syntax for declaring a function:
+        function greet() {
+            console.log("Hello, world!");
+        }
+
+        Syntax for calling a function:
+        greet(); // This will print "Hello, world!" to the console
+
+Question 2: What is the difference between a function declaration and a function 
+expression? 
+
+Answer:
+        A function declaration defines a named function and is hoisted, meaning it
+        can be called before it appears in the code.
+
+        Example (function declaration):
+        function greet() {
+            console.log("Hello!");
+        }
+
+        A function expression defines a function as part of an expression, often 
+        assigned to a variable. It is not hoisted, so it cannot be called before 
+        it is defined.
+
+        Example (function expression):
+        const greet = function() {
+            console.log("Hello!");
+        };
+
+Question 3: Discuss the concept of parameters and return values in functions.
+Answer:
+        Parameters are variables listed in a function's definition that allow you 
+        to pass values into the function. Return values are the results that a 
+        function sends back after execution using the return statement.
+
+        Example:
+        function add(a, b) {      // a and b are parameters
+            return a + b;         // returns the sum of a and b
+        }
+
+        let result = add(5, 3);   // 5 and 3 are arguments; result is 8
+        console.log(result);      // Output: 8 
