@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Divide by Zero Error Handling</title>
+</head>
+<body>
+    <h3>Divide by Zero Example</h3>
+    <pre id="output"></pre>
+
+    <script>
+        try {
+            let num = 10;
+            let divisor = 0;
+            let result = num / divisor;
+            if (!isFinite(result)) {
+                throw new Error("Error: Cannot divide by zero.");
+            }
+            document.getElementById("output").textContent = "Result: " + result;
+        } catch (error) {
+            document.getElementById("output").textContent = error.message;
+        }
+    </script>
+</body>
+</html>
