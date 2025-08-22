@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+        pre {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Numbers from 1 to 10 (for loop):</h3>
+    <pre id="forResult"></pre>
+
+    <h3>Sum of all even numbers from 1 to 10 (while loop):</h3>
+    <pre id="whileResult"></pre>
+
+    <script>
+        // For loop: print numbers from 1 to 10
+        let forOutput = "";
+        for (let i = 1; i <= 10; i++) {
+            forOutput += i + "\n";
+        }
+        document.getElementById("forResult").textContent = forOutput;
+
+        // While loop: sum all even numbers from 1 to 10
+        let sum = 0;
+        let num = 1;
+        while (num <= 10) {
+            if (num % 2 === 0) {
+                sum += num;
+            }
+            num++;
+        }
+        document.getElementById("whileResult").textContent = sum;
+    </script>
+</body>
+</html>

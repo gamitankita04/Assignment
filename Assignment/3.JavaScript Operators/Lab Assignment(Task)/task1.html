@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+    <h2>Arithmetic Operations</h2>
+    <label>Enter First Number: <input type="number" id="num1"></label><br><br>
+    <label>Enter Second Number: <input type="number" id="num2"></label><br><br>
+    <button onclick="calculate()">Calculate</button>
+
+    <h3>Results:</h3>
+    <p id="add"></p>
+    <p id="subtract"></p>
+    <p id="multiply"></p>
+    <p id="divide"></p>
+
+    <script>
+        function calculate() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+
+            document.getElementById("add").innerHTML = `Addition: ${num1 + num2}`;
+            document.getElementById("subtract").innerHTML = `Subtraction: ${num1 - num2}`;
+            document.getElementById("multiply").innerHTML = `Multiplication: ${num1 * num2}`;
+            
+            if (num2 !== 0) {
+                document.getElementById("divide").innerHTML = `Division: ${num1 / num2}`;
+            } else {
+                document.getElementById("divide").innerHTML = `Division: Cannot divide by zero`;
+            }
+        }
+    </script>
+</body>
+</html>

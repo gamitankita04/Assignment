@@ -1,0 +1,50 @@
+Question 1: What are the different types of operators in JavaScript? 
+Explain with examples. 
+Arithmetic operators 
+Assignment operators 
+Comparison operators 
+Logical operators 
+
+Answer:
+1. Arithmetic Operators  
+These are used to perform mathematical calculations.
+Example:
+let a = 10, b = 5;
+console.log(a + b); // Addition: 15
+console.log(a - b); // Subtraction: 5
+console.log(a * b); // Multiplication: 50
+console.log(a / b); // Division: 2
+console.log(a % b); // Modulus: 0
+
+2. Assignment Operators  
+These are used to assign values to variables.
+Example:
+let x = 10;      // Assigns 10 to x
+x += 5;          // Adds 5 to x (x = x + 5)
+x *= 2;          // Multiplies x by 2 (x = x * 2)
+
+3. Comparison Operators  
+These are used to compare two values and return true or false.
+Example:
+console.log(a > b);   // true
+console.log(a < b);   // false
+console.log(a == b);  // false
+console.log(a != b);  // true
+
+4. Logical Operators  
+These are used to combine multiple conditions.
+Example:
+let age = 20;
+console.log(age > 18 && age < 30); // true (AND)
+console.log(age < 18 || age > 30); // false (OR)
+console.log(!(age < 18));          // true (NOT)
+       
+Question 2: What is the difference between == and === in JavaScript? 
+ 
+Answer:
+The `==` operator checks for equality after converting both values to a common type (type coercion).  
+The `===` operator checks for equality without type conversion; both value and type must be the same.
+
+Example:
+console.log(5 == "5");   // true (values are equal after type conversion)
+console.log(5 === "5");  // false (types are different: number vs string)

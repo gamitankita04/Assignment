@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Odd Numbers Between 1 and 20</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+        pre {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Odd numbers between 1 and 20:</h3>
+    <pre id="oddResult"></pre>
+
+    <script>
+        let output = "";
+        for (let i = 1; i <= 20; i++) {
+            if (i % 2 !== 0) {
+                output += i + "\n";
+            }
+        }
+        document.getElementById("oddResult").textContent = output;
+    </script>
+</body>
+</html>

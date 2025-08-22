@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparison Operators</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Compare Two Numbers</h2>
+        <label>Enter First Number: <input type="number" id="num1"></label><br><br>
+        <label>Enter Second Number: <input type="number" id="num2"></label><br><br>
+        <button onclick="compare()">Compare</button>
+
+        <h3>Results:</h3>
+        <p id="equal"></p>
+        <p id="greater"></p>
+    </div>
+
+    <script>
+        function compare() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+
+            // Check if equal
+            if (num1 === num2) {
+                document.getElementById("equal").innerHTML = "The numbers are equal.";
+            } else {
+                document.getElementById("equal").innerHTML = "The numbers are not equal.";
+            }
+
+            // Check which one is greater
+            if (num1 > num2) {
+                document.getElementById("greater").innerHTML = "First number is greater than the second.";
+            } else if (num1 < num2) {
+                document.getElementById("greater").innerHTML = "Second number is greater than the first.";
+            } else {
+                document.getElementById("greater").innerHTML = "Both numbers are equal."; // Redundant but safe
+            }
+        }
+    </script>
+</body>
+</html>

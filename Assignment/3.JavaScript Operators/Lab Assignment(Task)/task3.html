@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <label>Enter First Number</label>
+            <input type="number" id="num" required>
+            <p>conditions: a > 10</p>
+            <label>Enter Second Number</label>
+            <input type="number" id="num2" required>
+            <br><br>
+            <p>conditions: b < 5</p>
+            <p>Check if both conditions are true</p>
+            <button type="button" onclick="checknum()">Check</button>
+            
+        </form>
+        <p id="result"></p>
+    </div>
+    
+    <script>
+        function checknum() {
+            let a = parseFloat(document.getElementById("num").value);
+            let b = parseFloat(document.getElementById("num2").value);
+            let result = document.getElementById("result");
+
+            if (a > 10 && b < 5) {
+                result.innerHTML = "Both conditions are true.";
+            } else {
+                result.innerHTML = "At least one condition is false.";
+            }
+        }
+    </script>
+
+        
+
+</body>
+</html>

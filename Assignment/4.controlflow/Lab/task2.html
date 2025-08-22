@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day of the Week Switch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            width: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter a number (1-7) to get the day of the week:</h2>
+    <input type="number" id="dayInput" min="1" max="7" required>
+    <button onclick="showDay()">Show Day</button>
+    <p id="result"></p>
+
+    <script>
+        function showDay() {
+            const dayNum = parseInt(document.getElementById("dayInput").value);
+            let dayName = "";
+
+            switch(dayNum) {
+                case 1:
+                    dayName = "Monday";
+                    break;
+                case 2:
+                    dayName = "Tuesday";
+                    break;
+                case 3:
+                    dayName = "Wednesday";
+                    break;
+                case 4:
+                    dayName = "Thursday";
+                    break;
+                case 5:
+                    dayName = "Friday";
+                    break;
+                case 6:
+                    dayName = "Saturday";
+                    break;
+                case 7:
+                    dayName = "Sunday";
+                    break;
+                default:
+                    dayName = "Invalid input. Please enter a number between 1 and 7.";
+            }
+
+            document.getElementById("result").textContent = dayName;
+        }
+    </script>
+</body>
+</html>
